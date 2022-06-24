@@ -20,6 +20,7 @@ var passlen;
 function generatePassword() {
   passlength();
   characterconfirm();
+  console.log(charList);
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------//
@@ -46,14 +47,19 @@ function passlength() {
 }
 //-------------------------------------------------------------------------------------------------------------------------------------------------------//
 // function for character confirmation
+var lowercase;
+var uppercase;
+var numeric;
+var special;
+
 function characterconfirm() {
   do {
-    valid = false;
+    var valid = false;
     lowercase = confirm("Do you want lowercase characters?")
     uppercase = confirm("Do you want uppercase characters?")
     numeric = confirm("Do you want numeric characters?")
-    specialChar = confirm("Do you want special characters?")
-    if ((lowercase === false) && (uppercase === false) && (numeric === false) && (specialChar === false)){
+    special = confirm("Do you want special characters?")
+    if ((lowercase === false) && (uppercase === false) && (numeric === false) && (special === false)){
       alert("You must select a character type!")
       valid = false;
     }else {
@@ -61,16 +67,31 @@ function characterconfirm() {
     }
   }
   while(valid === false);
+
+  var charL = '';
+  if (lowercase === true){
+    charL += lower;
+  }
+
+  if (uppercase === true){
+    charL += upper;
+  }
+
+  if (numeric === true){
+    charL += numbers;
+  }
+
+  if (special === true){
+    charL += specialLetters
+  }
+
+ window.charList = charL;
 }
 //-------------------------------------------------------------------------------------------------------------------------------------------------------//
 // character arrays
 var lower = "abcdefghijklmnopqrstuvwxyz";
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numeric = "1234567890";
-var special = "!#$%&' ()*+,-./:;<=>?@[]^_` {|}~";
-
-var lowerArr = lower.split(" ");
-var upperArr = upper.split(" ");
-var numericArr = numeric.split(" ");
-var specialChar = special.split(" ");
+var numbers = "1234567890";
+var specialLetters = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 //-------------------------------------------------------------------------------------------------------------------------------------------------------//
+//characters selected for password

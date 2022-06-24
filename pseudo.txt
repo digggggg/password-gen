@@ -24,6 +24,7 @@ each prompt should have a validator
 
 password is generated 
 	{
+		create array from concating the selected confirm prompts
 		for loop to iterate based off of password length
 		math.floor(math.random()) for rng on password
 			{
