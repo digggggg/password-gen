@@ -1,0 +1,36 @@
+Click button 
+
+	{
+		eventListner
+	}
+
+prompts for password criteria
+	
+	length of password (only between 8-128)
+	{
+		prompt for length
+		if statement to validate 
+		do/while loop to go again if criteria is invalid
+	}
+	
+	confirm lowercase, uppercase, numeric, special characters
+	{
+		confirm prompt(s) for lower,upper,numeric, special characters
+		validate that one prompt has been selected
+		do/while for validate
+	}
+
+each prompt should have a validator
+
+password is generated 
+	{
+		for loop to iterate based off of password length
+		math.floor(math.random()) for rng on password
+			{
+				rng criteria selected from approved characters
+				rng one of the characters from the array selected
+				append character to new array
+			}
+		join(password_array)
+
+displayed on page by alert or text 
