@@ -14,13 +14,16 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------//
-
+// generate passoword function
 var passlen;
 
 function generatePassword() {
   passlength();
+  characterconfirm();
 }
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------//
+//function for validating passlength
 function passlength() {
   do {
     var valid = false;
@@ -40,4 +43,22 @@ function passlength() {
     }
   }
   while (valid === false);
+}
+//-------------------------------------------------------------------------------------------------------------------------------------------------------//
+// function for character confirmation
+function characterconfirm() {
+  do {
+    valid = false;
+    lowercase = confirm("Do you want lowercase characters?")
+    uppercase = confirm("Do you want uppercase characters?")
+    numeric = confirm("Do you want numeric characters?")
+    specialChar = confirm("Do you want special characters?")
+    if ((lowercase === false) && (uppercase === false) && (numeric === false) && (specialChar === false)){
+      alert("You must select a character type!")
+      valid = false;
+    }else {
+      valid = true;
+    }
+  }
+  while(valid === false);
 }
