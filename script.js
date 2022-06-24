@@ -62,3 +62,15 @@ function characterconfirm() {
   }
   while(valid === false);
 }
+//-------------------------------------------------------------------------------------------------------------------------------------------------------//
+// character arrays
+var lower = "abcdefghijklmnopqrstuvwxyz";
+var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numeric = "1234567890";
+var special = "!#$%&' ()*+,-./:;<=>?@[]^_` {|}~";
+
+var lowerArr = lower.split(" ");
+var upperArr = upper.split(" ");
+var numericArr = numeric.split(" ");
+var specialChar = special.split(" ");
+//-------------------------------------------------------------------------------------------------------------------------------------------------------//
