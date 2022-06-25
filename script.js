@@ -14,7 +14,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------//
-// generate passoword function
+// generate password function
 var passlen;
 
 
@@ -50,18 +50,13 @@ function passlength() {
 }
 //-------------------------------------------------------------------------------------------------------------------------------------------------------//
 // function for character confirmation
-var lowercase;
-var uppercase;
-var numeric;
-var special;
-var charList;
 function characterconfirm() {
   do {
     var valid = false;
-    lowercase = confirm("Do you want lowercase characters?")
-    uppercase = confirm("Do you want uppercase characters?")
-    numeric = confirm("Do you want numeric characters?")
-    special = confirm("Do you want special characters?")
+    var lowercase = confirm("Do you want lowercase characters?")
+    var uppercase = confirm("Do you want uppercase characters?")
+    var numeric = confirm("Do you want numeric characters?")
+    var special = confirm("Do you want special characters?")
     if ((lowercase === false) && (uppercase === false) && (numeric === false) && (special === false)){
       alert("You must select a character type!")
       valid = false;
@@ -98,6 +93,7 @@ var numbers = "1234567890";
 var specialLetters = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 //-------------------------------------------------------------------------------------------------------------------------------------------------------//
 //characters selected for password
+var charList;
 var charListArr;
 var answer = [];
 function passwordRNG() {
