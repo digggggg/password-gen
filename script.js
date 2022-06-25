@@ -22,6 +22,7 @@ function generatePassword() {
   passlength();
   characterconfirm();
   passwordRNG();
+  return answer.join('');
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------//
@@ -98,11 +99,12 @@ var specialLetters = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 //-------------------------------------------------------------------------------------------------------------------------------------------------------//
 //characters selected for password
 var charListArr;
+var answer = [];
 function passwordRNG() {
   for (var i = 0; i < passlen; i++) {
   var charPicked = Math.floor(Math.random() * charListArr.length);
-  var answer = [];
   answer[i] = charListArr[charPicked]; 
   }
   return answer;
 }
+//-------------------------------------------------------------------------------------------------------------------------------------------------------//
