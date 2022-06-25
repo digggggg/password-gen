@@ -1,8 +1,7 @@
 # password-gen
 
 ## Description
-
-
+A template with css and html was given to so I could add functionality to the page with js. I needed to include a password generator that allowed for users custom inputs. Password length, lowercase, uppercase, numeric, and special characters were necessary options for the user I implemented into the password generator.
 
 ## Table of Contents
 
@@ -12,8 +11,9 @@
 * [License](#license)
 
 ## Installation
+[Link to website here](https://digggggg.github.io/password-gen/)
 
-
+You can clone the git repo and just run the index.html
 
 ## Usage 
 ![GIF of Password Generator](https://github.com/digggggg/password-gen/blob/main/passwordGIF.gif)
@@ -21,7 +21,6 @@
 ## Credits
 
 Jerome Chenette
-
 
 ## License
 [LICENSE](/LICENSE.md)
