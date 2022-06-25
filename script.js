@@ -35,8 +35,9 @@ function passlength() {
       alert(passlen + " is not a number");
        valid = false;
     } else if (passlen === null) {
-      valid = true;
-      return;
+      alert("You must enter a password length!")
+      valid = false;
+
     }else if (((Number(passlen) < 8) || (Number(passlen) > 128))){
       alert(passlen + " is not between 8 and 128");
       valid = false;
