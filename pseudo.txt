@@ -35,5 +35,3 @@ password is generated
 		join(password_array)
 
 displayed on page by alert or text
-
-https://code-boxx.com/abort-javascript-execution/#:~:text=6%20Ways%20To%20Abort%20Javascript%20Execution%20%28Simple%20Examples%29,%E2%80%93%20Use%20process.abort%20%28%29%20or%20process.exit%20%28%29.%20 
