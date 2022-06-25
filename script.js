@@ -17,10 +17,11 @@ generateBtn.addEventListener("click", writePassword);
 // generate passoword function
 var passlen;
 
+
 function generatePassword() {
   passlength();
   characterconfirm();
-  console.log(charList);
+  passwordRNG();
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------//
@@ -44,6 +45,7 @@ function passlength() {
     }
   }
   while (valid === false);
+  return passlen;
 }
 //-------------------------------------------------------------------------------------------------------------------------------------------------------//
 // function for character confirmation
@@ -51,7 +53,7 @@ var lowercase;
 var uppercase;
 var numeric;
 var special;
-
+var charList;
 function characterconfirm() {
   do {
     var valid = false;
@@ -67,8 +69,8 @@ function characterconfirm() {
     }
   }
   while(valid === false);
-
   var charL = '';
+  
   if (lowercase === true){
     charL += lower;
   }
@@ -84,8 +86,8 @@ function characterconfirm() {
   if (special === true){
     charL += specialLetters
   }
-
- window.charList = charL;
+  console.log(charL);
+ return charListArr = charL.split('');
 }
 //-------------------------------------------------------------------------------------------------------------------------------------------------------//
 // character arrays
@@ -95,3 +97,12 @@ var numbers = "1234567890";
 var specialLetters = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 //-------------------------------------------------------------------------------------------------------------------------------------------------------//
 //characters selected for password
+var charListArr;
+function passwordRNG() {
+  for (var i = 0; i < passlen; i++) {
+  var charPicked = Math.floor(Math.random() * charListArr.length);
+  var answer = [];
+  answer[i] = charListArr[charPicked]; 
+  }
+  return answer;
+}
